@@ -1,0 +1,474 @@
+/* style.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #065429;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: rgb(212, 42, 133);
+}
+
+main {
+    padding-top: 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #065429;
+}
+
+.hero-content p {
+    color: #065429;
+}
+
+.profile-img{
+    width: 350px;
+    height: 350px;
+   
+}
+
+
+h1 {
+    color: #065429;
+}
+
+#about p {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#skills .skill-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skills .skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #065429;
+}
+
+#skills .skill-category ul {
+    list-style: none;
+}
+
+#skills .skill-category ul li {
+    margin-bottom: 0.5rem;
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#projects .project-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#projects .project-card:hover {
+    transform: translateY(-5px);
+}
+
+#projects .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#projects .project-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #065429;
+}
+
+#projects .project-card p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#projects .project-card a {
+    display: block;
+    background-color: #065429;
+    color: #fff;
+    text-align: center;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#projects .project-card a:hover {
+    background-color: rgb(212, 42, 133);
+}
+
+#contact .contact-details {
+    margin-top: 1.5rem;
+    color: white;
+}
+
+#contact .contact-details p {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+#contact .contact-details a {
+    color: #065429;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    color: #065429;
+}
+
+#contact .contact-details a:hover {
+    color: rgb(212, 42, 133);
+}
+
+#contact .contact-details i {
+    margin-right: 0.5rem;
+    color: #065429;
+}
+
+footer {
+    background-color: #065429;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 1rem;
+    }
+
+    #skills .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ... (Your existing CSS) ... */
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Media Queries for Mobile Menu */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #065429;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
+/* ... (Your existing CSS) ... */
+
+/* Hero Section Animations */
+#hero .hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInHero 1s forwards 0.5s;
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills Section Animations */
+#skills .skill-category {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Projects Section Animations */
+#projects .project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+
+#projects .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* General Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSection 1s forwards;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CTA Button Animation */
+.cta-button {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Menu Toggle Animation */
+.mobile-menu-toggle span {
+    transition: transform 0.4s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+body {
+    background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-7-full.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center center; /* Center the image */
+    /* Optional: Add a subtle overlay for better text readability */
+    /* background-color: rgba(0, 0, 0, 0.3); */ /* Dark overlay */
+    /* background-blend-mode: multiply; */ /* Overlay blend mode */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('your-mobile-image.jpg'); /* Use a mobile-optimized image */
+        background-size: cover;
+        background-attachment: scroll; /* change to scroll for better mobile performance*/
+    }
+}
+.feel{
+    color: white;
+}
+
+
+/* ... (Your existing CSS) ... */
+
+/* Hero Section */
+#hero {
+    /* background: linear-gradient(135deg, #e9f1ff, #d0e7ff); */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    text-align: center; /* Center text within hero content */
+}
+
+#hero .hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInHero 1.2s ease-out forwards 0.3s, pulse 4s infinite alternate;
+    max-width: 600px; /* Limit content width */
+    width: 100%; /* Ensure content takes up full width within max-width */
+}
+
+#hero .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem; /* Center the image horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #065429;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: buttonPulse 2s infinite alternate;
+}
+
+.cta-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+nav {
+    display: flex; /* Enable Flexbox on the navbar */
+    justify-content: space-around; /* Distribute items evenly with space around */
+    align-items: center; /* Vertically center items */
+    width: 100%; /* Ensure navbar takes full width of container */
+}
+
+.nav-links {
+    display: flex; /* Enable Flexbox on the nav links */
+    justify-content: space-around; /* Distribute items evenly with space around */
+    width: 100%; /* Ensure nav links take full width of navbar */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    text-align: center; /* Center the text inside each list item */
+    width: 25%; /* Give each list item an equal percentage of the width */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 15px; /* Add padding for better spacing */
+    display: block; /* Make links block-level to fill list item */
+    width: 100%; /* Ensure links take full width of their list item */
+}
+
+
